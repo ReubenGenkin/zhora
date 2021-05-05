@@ -2,10 +2,10 @@
 console.log("hi");
 
 
-var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var lower = "abcdefghijklmnopqrstuvwxyz"
-var char = "±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠"
-var numb = "1234567890"
+var upper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+var lower = ["abcdefghijklmnopqrstuvwxyz"]
+var char = ["±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠"]
+var numb = ["1234567890"]
 var passwordCheck = ""
 
 function check() {
@@ -13,12 +13,13 @@ function check() {
 
     if ( lengthCheck <= 128 && lengthCheck >= 8 ) {
         alert ("Please choose password parameters from the next 4 prompts");
-        passLength = lengthCheck;
+        passLength = parseInt(lengthCheck);
 
         upperCheck = confirm("Do you want uppercase letters?");
             if ( upperCheck) {
                 passwordCheck = passwordCheck + upper
-            } else {}
+            } else {
+            }
 
         lowerCheck = confirm("Do you want lowercase letters?");
             if ( lowerCheck) {
@@ -45,23 +46,28 @@ function check() {
 
 check();
 console.log(passwordCheck);
+console.log(parseInt(passLength));
+var passEnd = ""
+function randomGen() {
 
+    for (var i= 0; i < passLength; i++) {
+      passEnd += passwordCheck[Math.floor(Math.random() * passwordCheck.length)];
+    }
+    var password = passEnd
+    var passwordText = document.querySelector("#password");
+  
+    passwordText.value = password;
+  
+}
 
-
-
+randomGen();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
-}
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", randomGen);
 
