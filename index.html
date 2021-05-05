@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+
+        <div class="input">
+            <!--  input for character amount-->
+            <h3>Length</h3>
+            <input type="text" name="length-confirm" id="length" />
+            <label for="length">Enter desired length</label>
+
+            <!--  uppercase confirm -->
+            <h3>Uppercase</h3>
+            <input type="radio" name="upper-confirm" id="upper-yes" />
+            <label for="upper-yes">Yes</label>
+
+            <input type="radio" name="upper-confirm" id="upper-no" />
+            <label for="upper-no">No</label>
+
+            <!--  lowercase confirm-->
+            <h3>Lowercase</h3>
+            <input type="radio" name="lower-confirm" id="lower-yes" />
+            <label for="lower-yes">Yes</label>
+
+            <input type="radio" name="upper-confirm" id="lower-no" />
+            <label for="lower-no">No</label>
+
+            <!--  number confirm-->
+            <h3>Number</h3>
+            <input type="radio" name="number-confirm" id="number-yes" />
+            <label for="number-yes">No</label>
+
+            <input type="radio" name="number-confirm" id="number-no" />
+            <label for="upper-no">Yes</label>
+
+            <!--  special character confirm-->
+            <h3>Special Character</h3>
+            <input type="radio" name="special-confirm" id="special-yes" />
+            <label for="special-yes">Yes</label>
+
+            <input type="radio" name="special-confirm" id="special-no" />
+            <label for="special-no">No</label>
+
+
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Generate a Password</h2>
+            </div>
+            <div class="card-body">
+                <textarea readonly id="password" placeholder="Your Secure Password"
+                    aria-label="Generated Password"></textarea>
+            </div>
+            <div class="card-footer">
+                <button id="generate" class="btn">Generate Password</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js.js"></script>
+</body>
+
+</html>
