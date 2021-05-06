@@ -44,23 +44,24 @@ function check() {
     
 }
 
-check();
+/*check();
 console.log(passwordCheck);
 console.log(parseInt(passLength));
-var passEnd = ""
+var passEnd = ""*/
 function randomGen() {
+    check();
+    var passwordText = document.querySelector("#password");
 
+    var passEnd = "";
     for (var i= 0; i < passLength; i++) {
       passEnd += passwordCheck[Math.floor(Math.random() * passwordCheck.length)];
     }
-    var password = passEnd
-    var passwordText = document.querySelector("#password");
-  
-    passwordText.value = password;
+    
+    
+    passwordText.value = passEnd;
   
 }
 
-randomGen();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -70,4 +71,5 @@ var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", randomGen);
+
 
