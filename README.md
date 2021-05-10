@@ -7,5 +7,5 @@ The if else statements were used to filter out the users requirements for the pa
 
 [Link to git hub repository](https://github.com/ReubenGenkin/zhora)
 
-![screenshot](./zhora/screencapture-file-C-Users-rleib-Desktop-Rutgers-Coding-Homework-challenge3-zhora-index-html-2021-05-10-01_45_04 (1).png)
+![screenshot]("./zhora/screencap.png")
 
