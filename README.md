@@ -7,5 +7,5 @@ The if else statements were used to filter out the users requirements for the pa
 
 [Link to git hub repository](https://github.com/ReubenGenkin/zhora)
 
-![screenshot]("./zhora/screencap.png")
+![screenshot](./zhora/screencap.png)
 
